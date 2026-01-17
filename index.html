@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Overcome jet lag naturally using the 16-hour fasting method based on circadian rhythm research. Calculate your personalized fasting schedule.">
+    <meta name="keywords"
+        content="Fasting Jet Lag, Circadian Rhythm, 16 Hour Fast, Dr. Byungjoo Park, Travel Health, Timezone Reset, Body Clock Optimization">
+    <meta name="author" content="Dr. Byungjoo Park">
+    <link rel="canonical" href="https://fastingjetlag.com" />
+
+    <!-- Browser Tab Title (Short & Clean) -->
+    <title>JetLag Reset</title>
+
+    <!-- Social Media Display (Open Graph) - Optimized for Sharing -->
+    <meta property="og:title" content="Fasting Jet Lag Reset | Dr. Byungjoo Park" />
+    <meta property="og:description"
+        content="Overcome jet lag naturally using the 16-hour fasting method based on scientific research. Calculate your personalized fasting schedule." />
+    <meta property="og:url" content="https://fastingjetlag.com" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Dynamic Emoji Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Fasting Jet Lag Reset</h1>
+            <p class="subtitle">Advanced Biological Rhythm Optimization Solution</p>
+        </header>
+
+        <section class="study-card" style="font-size: 0.95rem;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 15px; border-bottom: none; padding-bottom: 0;">Why This Tool?
+            </h2>
+            <p style="margin-bottom: 15px; line-height: 1.6;">
+                I frequently travel between California and South Korea, where the time difference completely flips day
+                and night.
+                Through trial and error, I discovered that strategic 16-hour fasting—timed around my flight
+                schedule—helps me adapt to the new timezone almost immediately.
+                Whether I fast during the flight, on arrival day, or the next day depends on my specific travel
+                schedule.
+            </p>
+            <p style="margin-bottom: 15px; line-height: 1.6;">
+                Later, I found that Harvard Medical School researchers published similar findings.
+                This tool calculates your personalized fasting schedule based on your exact travel times.
+                Even if you're not traveling, the Daily Rhythm Reset can help you become a morning person.
+            </p>
+            <p style="margin-bottom: 20px; line-height: 1.6; font-size: 0.9rem; color: #666; font-style: italic;">
+                <strong>Important:</strong> As stated in the disclaimer below, this is not medical advice.
+                Please consider your health condition and fast responsibly.
+            </p>
+        </section>
+
+        <section class="study-card" style="font-size: 0.95rem;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 15px; border-bottom: none; padding-bottom: 0;">Scientific
+                Background</h2>
+            <p style="margin-bottom: 15px; line-height: 1.5;">
+                Research co-authored by Clifford Saper, MD, PhD (Harvard Medical School) identified a secondary
+                "food-driven" biological clock.
+                Studies suggest that fasting for approximately 16 hours before your target breakfast time may help
+                adjust your internal clock to a new timezone.
+            </p>
+            <p
+                style="font-size: 0.75rem; color: #999; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
+                * Reference: Fuller, P. M., Lu, J., & Saper, C. B. (2008). <em>"Differential Rescue of Light- and
+                    Food-Entrainable Circadian Rhythms."</em> Science, Vol 320, Issue 5879, pp. 1074-1077. DOI:
+                10.1126/science.1153277
+            </p>
+        </section>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="travel">✈️ Travel Optimization</button>
+            <button class="mode-btn" data-mode="reset">🏠 Daily Rhythm Reset</button>
+        </div>
+
+        <!-- Travel Mode Section -->
+        <section id="travel-section" class="form-section active">
+            <div class="study-card">
+                <h3>Enter Your Travel Schedule</h3>
+                <p
+                    style="margin-bottom: 20px; font-size: 0.9rem; color: var(--text-dim); background: #f9f9f9; padding: 15px; border-left: 3px solid var(--primary); border-radius: 4px;">
+                    <strong>Why exact times?</strong><br>
+                    We mathematically calculate your timezone difference using your <em>Departure Time</em>, <em>Arrival
+                        Time</em>, and <em>Flight Duration</em>. Please enter the exact local times shown on your flight
+                    ticket for accurate results.
+                </p>
+                <form id="travel-form">
+                    <div class="input-grid">
+                        <!-- Departure Group -->
+                        <div class="input-group">
+                            <label>Departure (Local Time on Ticket)</label>
+                            <!-- Unified Grid Layout: Date (55%) | Hour (20%) | Min (20%) + gaps -->
+                            <div style="display: grid; grid-template-columns: 2fr 0.8fr 0.8fr; gap: 8px;">
+                                <input type="date" name="dep_date" required
+                                    style="padding: 10px; border: 1px solid var(--border); border-radius: 4px; background: white; font-size: 1rem;">
+
+                                <select name="dep_hour" required
+                                    style="padding: 10px; border: 1px solid var(--border); border-radius: 4px; background: white; text-align: center; font-size: 1rem;">
+                                    <option value="" disabled selected>Hr</option>
+                                    <option value="00">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                </select>
+
+                                <select name="dep_min" required
+                                    style="padding: 10px; border: 1px solid var(--border); border-radius: 4px; background: white; text-align: center; font-size: 1rem;">
+                                    <option value="" disabled selected>Min</option>
+                                    <option value="00">00</option>
+                                    <option value="05">05</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Arrival Group -->
+                        <div class="input-group">
+                            <label>Arrival (Local Time on Ticket)</label>
+                            <div style="display: grid; grid-template-columns: 2fr 0.8fr 0.8fr; gap: 8px;">
+                                <input type="date" name="arr_date" required
+                                    style="padding: 10px; border: 1px solid var(--border); border-radius: 4px; background: white; font-size: 1rem;">
+
+                                <select name="arr_hour" required
+                                    style="padding: 10px; border: 1px solid var(--border); border-radius: 4px; background: white; text-align: center; font-size: 1rem;">
+                                    <option value="" disabled selected>Hr</option>
+                                    <option value="00">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                </select>
+
+                                <select name="arr_min" required
+                                    style="padding: 10px; border: 1px solid var(--border); border-radius: 4px; background: white; text-align: center; font-size: 1rem;">
+                                    <option value="" disabled selected>Min</option>
+                                    <option value="00">00</option>
+                                    <option value="05">05</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-grid">
+                        <div class="input-group" style="grid-column: span 2;">
+                            <label>Total Flight Duration</label>
+                            <div class="duration-selector" style="display: flex; gap: 15px;">
+                                <div style="flex: 1;">
+                                    <select name="duration_hours" required
+                                        style="width: 100%; padding: 16px; border: 1px solid var(--border); border-radius: 4px; background: white; font-size: 1.1rem;">
+                                        <option value="" disabled selected>Hours</option>
+                                        <!-- Will be populated by JS or static for now -->
+                                        <option value="0">0h</option>
+                                        <option value="1">1h</option>
+                                        <option value="2">2h</option>
+                                        <option value="3">3h</option>
+                                        <option value="4">4h</option>
+                                        <option value="5">5h</option>
+                                        <option value="6">6h</option>
+                                        <option value="7">7h</option>
+                                        <option value="8">8h</option>
+                                        <option value="9">9h</option>
+                                        <option value="10">10h</option>
+                                        <option value="11">11h</option>
+                                        <option value="12">12h</option>
+                                        <option value="13">13h</option>
+                                        <option value="14">14h</option>
+                                        <option value="15">15h</option>
+                                        <option value="16">16h</option>
+                                        <option value="17">17h</option>
+                                        <option value="18">18h</option>
+                                        <option value="19">19h</option>
+                                        <option value="20">20h</option>
+                                        <option value="21">21h</option>
+                                        <option value="22">22h</option>
+                                        <option value="23">23h</option>
+                                        <option value="24">24h</option>
+                                    </select>
+                                </div>
+                                <div style="flex: 1;">
+                                    <select name="duration_minutes" required
+                                        style="width: 100%; padding: 16px; border: 1px solid var(--border); border-radius: 4px; background: white; font-size: 1.1rem;">
+                                        <option value="" disabled selected>Minutes</option>
+                                        <option value="0">00m</option>
+                                        <option value="5">05m</option>
+                                        <option value="10">10m</option>
+                                        <option value="15">15m</option>
+                                        <option value="20">20m</option>
+                                        <option value="25">25m</option>
+                                        <option value="30">30m</option>
+                                        <option value="35">35m</option>
+                                        <option value="40">40m</option>
+                                        <option value="45">45m</option>
+                                        <option value="50">50m</option>
+                                        <option value="55">55m</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="calculate-btn">Get My Reset Plan</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Routine Reset Section -->
+        <section id="reset-section" class="form-section">
+            <div class="study-card">
+                <h3>Reset to Early Bird Mode</h3>
+                <p style="margin-bottom: 20px; color: var(--text-dim);">Struggling with an irregular sleep schedule? Use
+                    this food-based reset to jumpstart your morning routine tomorrow.</p>
+                <form id="reset-form">
+                    <button type="submit" class="calculate-btn">Start Reset Guide</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Solution Display -->
+        <div id="solution-box" class="solution-box">
+            <h3
+                style="border-bottom: 2px solid var(--primary); padding-bottom: 10px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center;">
+                Target Reset Schedule
+                <button id="print-btn" class="secondary-btn" style="padding: 5px 15px; font-size: 0.9rem;">🖨️ Save
+                    Plan</button>
+            </h3>
+            <div id="solution-timeline">
+                <!-- Javascript will inject items here -->
+            </div>
+            <p id="pro-tip"
+                style="margin-top: 30px; font-size: 0.9rem; color: var(--text-dim); text-align: left; background: #f4f4f4; padding: 15px; border-radius: 8px;">
+                <!-- Content injected by JS -->
+            </p>
+        </div>
+
+        <!-- About the Developer Section -->
+        <section class="about-card">
+            <h3>Designed by Dr. Byungjoo Park</h3>
+            <div class="about-text" style="max-width: 100%;">
+                <p>
+                    Dr. Byungjoo Park specializes in optimizing human performance through the convergence of engineering
+                    precision and physiological wisdom.
+                    With a Ph.D. in Engineering (Yonsei Univ.) and background as a Visiting Scholar at UCLA Medicine, he
+                    applies systemic optimization principles to biological rhythms.
+                </p>
+                <p>
+                    Currently active as a <strong>Licensed Acupuncturist</strong> and <strong>Registered Patent
+                        Agent</strong>, he treats health and energy as essential elements for a balanced life.
+                    His "Systemic Optimization" methodology notably supported his children to become the youngest
+                    attorneys in California history at age 17.
+                </p>
+                <p style="margin-top: 25px;">
+                    <a href="https://myteabalance.com" target="_blank">Visit MyTeaBalance.com →</a>
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="disclaimer-box"
+                style="margin-top: 30px; margin-bottom: 20px; padding: 15px; font-size: 0.8rem; color: #666; background: #f5f5f5; border-radius: 4px; text-align: left;">
+                <strong>Medical Disclaimer:</strong><br>
+                This tool is for educational and informational purposes only and does not constitute medical advice. It
+                is not intended to diagnose, treat, cure, or prevent any disease or medical condition.
+                Always consult with a qualified healthcare professional before making significant changes to your diet
+                or if you have specific health concerns.
+                Results may vary by individual.
+            </div>
+            <p>© 2026 Dr. Byungjoo Park. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
